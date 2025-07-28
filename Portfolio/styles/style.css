@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 15rem;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background: url("../imgs/Formas\ Geométricas\ com\ Luz\ Cálida.png") no-repeat
+    center fixed;
+  background-size: cover;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.nome {
+  font-size: 2rem;
+  color: aqua;
+}
+
+.cursor {
+  color: rgb(255, 0, 0);
+}
+
+nav .cabecalho {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+nav .cabecalho a:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(16, 15, 15, 0.189);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+.nomeMeio {
+  text-align: center;
+  font-size: 7rem;
+  margin-top: 8rem;
+}
+.descricao {
+  text-align: center;
+  font-size: 3rem;
+}
+
+#especialidades {
+  padding: 100px 5%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-secao {
+  font-size: 3rem;
+  margin-top: 15rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  position: relative;
+  color: #00f7ff;
+}
+
+.titulo-secao::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #00f7ff, #ff0000);
+  border-radius: 2px;
+}
+
+.container-habilidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.cartao-habilidade {
+  background: rgba(20, 20, 40, 0.7);
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 247, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartao-habilidade:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 247, 255, 0.2);
+  border-color: rgb(0, 238, 255);
+}
+
+.icone-habilidade {
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  color: #ff0000;
+}
+
+.titulo-habilidade {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: rgb(255, 0, 0);
+  text-align: center;
+}
+
+.lista-habilidade {
+  list-style: none;
+  width: 100%;
+}
+
+.lista-habilidade li {
+  margin-bottom: 15px;
+  padding: 12px;
+  background: rgba(30, 30, 50, 0.5);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.lista-habilidade li:hover {
+  background: rgba(0, 247, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.lista-habilidade li i {
+  margin-right: 12px;
+  font-size: 1.2rem;
+  color: rgb(255, 0, 0);
+}
