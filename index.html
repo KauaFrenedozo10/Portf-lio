@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KauãFrenedozo - Front-End Developer</title>
+  <title>KauãFrenedozo - Full-Stack Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./Portfolio/styles/style.css">
+    <link rel="stylesheet" href="./Portfolio/styles/style.css">
+  <script src="./Portfolio/scripts/script.js" defer></script>
 </head>
 
 <body>
@@ -19,12 +20,17 @@
   <header>
     <div class="container">
       <nav>
-        <a href="#" class="logo">Kauã Frenedozo.<span style="color: blue;">_</span></a>
+        <a href="#" class="logo">Kauã Frenedozo.<span style="color: rgb(255, 247, 0);">_</span></a>
         <div class="nav-links">
-          <a href="#home" class="active">home</a>
-          <a href="#expertise">expertise</a>
-          <a href="#work">work</a>
-          <a href="#contact">contact</a>
+          <a href="#home" class="active" id="menu-home">home</a>
+          <a href="#expertise" id="menu-expertise">expertise</a>
+          <a href="#work" id="menu-work">work</a>
+          <a href="#contact" id="menu-contact">contact</a>
+        </div>
+        <div class="language-selector">
+          <button class="language-btn" id="language-toggle">
+            <img class="language-flag" id="flag-icon" src="https://flagcdn.com/w20/br.png" alt="Português">
+          </button>
         </div>
         <div class="hamburger">
           <i class="fas fa-bars"></i>
@@ -38,12 +44,12 @@
     <div class="container">
       <div class="hero-content">
         <h1 class="hero-name">Kauã Frenedozo</h1>
-        <p class="hero-title">FRONT END & APP DEVELOPER</p>
+        <p class="hero-title" id="hero-title">FULL-STACK DEVELOPER</p>
 
         <div class="hero-links">
-          <a href="#expertise">expertise</a>
-          <a href="#work">work</a>
-          <a href="#contact">contact</a>
+          <a href="#expertise" id="hero-expertise">expertise</a>
+          <a href="#work" id="hero-work">work</a>
+          <a href="#contact" id="hero-contact">contact</a>
         </div>
       </div>
     </div>
@@ -56,14 +62,15 @@
   <!-- Skills Section -->
   <section class="skills" id="expertise">
     <div class="container">
-      <h2 class="section-title">Minhas <span>Habilidades</span></h2>
+      <h2 class="section-title" id="skills-title">Minhas <span>Habilidades</span></h2>
       <div class="skills-grid">
+        <!-- Frontend Skills -->
         <div class="skill-card">
           <div class="skill-icon">
             <i class="fab fa-html5"></i>
           </div>
           <h3>HTML5 & CSS3</h3>
-          <p>
+          <p id="skill-html">
             Criação de interfaces responsivas e acessíveis com as mais
             recentes tecnologias web.
           </p>
@@ -73,7 +80,7 @@
             <i class="fab fa-js"></i>
           </div>
           <h3>JavaScript</h3>
-          <p>
+          <p id="skill-js">
             Desenvolvimento de aplicações interativas e dinâmicas com ES6+ e
             padrões modernos.
           </p>
@@ -83,39 +90,75 @@
             <i class="fab fa-react"></i>
           </div>
           <h3>React.js</h3>
-          <p>
+          <p id="skill-react">
             Construção de interfaces de usuário escaláveis e de alto
             desempenho com React.
           </p>
         </div>
+        
+        <!-- Backend Skills -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-java"></i>
+          </div>
+          <h3>Java & Spring Boot</h3>
+          <p id="skill-java">
+            Desenvolvimento de aplicações back-end robustas e escaláveis com Java e Spring Boot.
+          </p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-python"></i>
+          </div>
+          <h3>Python</h3>
+          <p id="skill-python">
+            Programação em Python para automação, análise de dados e desenvolvimento web.
+          </p>
+        </div>
+        
+        <!-- DevOps & Tools -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <h3>GitHub & GitFlow</h3>
+          <p id="skill-github">
+            Versionamento de código e gerenciamento de branches seguindo o fluxo GitFlow.
+          </p>
+        </div>
+        
+        <!-- Agile & Management -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h3>Scrum & Kanban</h3>
+          <p id="skill-scrum">
+            Gestão ágil de projetos com sprints, backlogs e quadros de tarefas.
+          </p>
+        </div>
+        
+        <!-- UI/UX -->
         <div class="skill-card">
           <div class="skill-icon">
             <i class="fas fa-paint-brush"></i>
           </div>
           <h3>UI/UX Design</h3>
-          <p>
+          <p id="skill-ui">
             Design de interfaces intuitivas focadas na experiência do usuário
             e usabilidade.
           </p>
         </div>
+        
+        <!-- Mobile -->
         <div class="skill-card">
           <div class="skill-icon">
             <i class="fas fa-mobile-alt"></i>
           </div>
           <h3>Responsividade</h3>
-          <p>
+          <p id="skill-responsive">
             Sites que se adaptam perfeitamente a qualquer dispositivo ou
             tamanho de tela.
-          </p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">
-            <i class="fas fa-bolt"></i>
-          </div>
-          <h3>Performance</h3>
-          <p>
-            Otimização de aplicações para carregamento rápido e experiência
-            fluida.
           </p>
         </div>
       </div>
@@ -125,7 +168,7 @@
   <!-- Projects Section -->
   <section class="projects" id="work">
     <div class="container">
-      <h2 class="section-title">Meus <span>Projetos</span></h2>
+      <h2 class="section-title" id="projects-title">Meus <span>Projetos</span></h2>
       <div class="projects-grid">
         <div class="project-card">
           <div class="project-img">
@@ -134,8 +177,8 @@
               alt="Loja Virtual Moderna" />
           </div>
           <div class="project-info">
-            <h3>Loja Virtual Moderna</h3>
-            <p>
+            <h3 id="project-1-title">Loja Virtual Moderna</h3>
+            <p id="project-1-desc">
               Plataforma de e-commerce completa com carrinho, checkout e
               integração de pagamentos.
             </p>
@@ -146,8 +189,8 @@
               <span class="tech">MongoDB</span>
             </div>
             <div class="project-links">
-              <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-              <a href="#"><i class="fab fa-github"></i> Código</a>
+              <a href="#"><i class="fas fa-external-link-alt"></i> <span id="project-demo">Demo</span></a>
+              <a href="#"><i class="fab fa-github"></i> <span id="project-code">Código</span></a>
             </div>
           </div>
         </div>
@@ -159,8 +202,8 @@
               alt="Dashboard Financeiro" />
           </div>
           <div class="project-info">
-            <h3>Dashboard Financeiro</h3>
-            <p>
+            <h3 id="project-2-title">Dashboard Financeiro</h3>
+            <p id="project-2-desc">
               Sistema de análise e visualização de dados financeiros em tempo
               real com gráficos interativos.
             </p>
@@ -170,8 +213,7 @@
               <span class="tech">Firebase</span>
             </div>
             <div class="project-links">
-              <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-              <a href="#"><i class="fab fa-github"></i> Código</a>
+              <a href="#"><i class="fab fa-github"></i> <span id="project-code-2">Código</span></a>
             </div>
           </div>
         </div>
@@ -183,8 +225,8 @@
               alt="App de Fitness" />
           </div>
           <div class="project-info">
-            <h3>App de Fitness</h3>
-            <p>
+            <h3 id="project-3-title">App de Fitness</h3>
+            <p id="project-3-desc">
               Aplicativo para acompanhamento de treinos, dieta e progresso
               físico com plano personalizado.
             </p>
@@ -194,8 +236,7 @@
               <span class="tech">AWS</span>
             </div>
             <div class="project-links">
-              <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-              <a href="#"><i class="fab fa-github"></i> Código</a>
+              <a href="#"><i class="fab fa-github"></i> <span id="project-code-3">Código</span></a>
             </div>
           </div>
         </div>
@@ -207,126 +248,30 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact-content">
-        <h2 class="section-title">Entre em <span>Contato</span></h2>
-        <p>
+        <h2 class="section-title" id="contact-title">Entre em <span>Contato</span></h2>
+        <p id="contact-text">
           Estou disponível para novos projetos e oportunidades. Entre em
           contato comigo através dos canais abaixo ou envie uma mensagem
           direta.
         </p>
 
         <div class="social-links">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/in/kau%C3%A3-frenedozo-8641492b5/"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/KauaFrenedozo10"><i class="fab fa-github"></i></a>
         </div>
 
         <div class="contact-info">
-          <a href="mailto:contato@meuportfolio.com" class="email-link">contato@meuportfolio.com</a>
+          <a href="mailto:kfrenedozo@gmail.com" class="email-link">kfrenedozo@gmail.com</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Kauã Frenedozo. Todos os direitos reservados.</p>
+      <p id="footer-text">&copy; 2025 Kauã Frenedozo. Todos os direitos reservados.</p>
     </div>
   </footer>
-
-  <script>
-    // Mobile menu toggle
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-    const navLinksItems = document.querySelectorAll(".nav-links a");
-
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      hamburger.classList.toggle("active");
-    });
-
-    // Close menu when clicking on a link
-    navLinksItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        hamburger.classList.remove("active");
-      });
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 80,
-            behavior: "smooth",
-          });
-        }
-      });
-    });
-
-    // Scroll down button
-    document
-      .querySelector(".scroll-down")
-      .addEventListener("click", function () {
-        const target = document.querySelector(
-          this.getAttribute("data-target")
-        );
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 80,
-            behavior: "smooth",
-          });
-        }
-      });
-
-    // Add active class to nav links based on scroll position
-    window.addEventListener("scroll", () => {
-      const sections = document.querySelectorAll("section");
-      const scrollPosition = window.scrollY + 100;
-
-      sections.forEach((section) => {
-        if (
-          scrollPosition >= section.offsetTop &&
-          scrollPosition < section.offsetTop + section.offsetHeight
-        ) {
-          const id = section.getAttribute("id");
-          navLinksItems.forEach((item) => {
-            item.classList.remove("active");
-            if (item.getAttribute("href") === `#${id}`) {
-              item.classList.add("active");
-            }
-          });
-        }
-      });
-    });
-
-    // Initialize animations on scroll
-    const observerOptions = {
-      threshold: 0.1,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = "translateY(0)";
-        }
-      });
-    }, observerOptions);
-
-    document
-      .querySelectorAll(".skill-card, .project-card")
-      .forEach((card) => {
-        card.style.opacity = 0;
-        card.style.transform = "translateY(50px)";
-        card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-        observer.observe(card);
-      });
-  </script>
 </body>
 
 </html>

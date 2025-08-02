@@ -1,10 +1,10 @@
 :root {
   --dark: #0a0a0a;
   --darker: #050505;
-  --light: #f8f9fa;
+  --light: #ffffff;
   --gray: #6c757d;
-  --accent: #2563eb;
-  --accent-light: #3b82f6;
+  --accent: #eeff00;
+  --accent-light: #eeff00;
   --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   --card-bg: rgba(30, 30, 30, 0.5);
   --card-border: rgba(255, 255, 255, 0.05);
@@ -114,6 +114,35 @@ nav {
   z-index: 1001;
 }
 
+/* Language Selector */
+.language-selector {
+  margin-left: 20px;
+  position: relative;
+}
+
+.language-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.language-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.language-flag {
+  width: 24px;
+  height: 18px;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
 /* Hero Section with Background Image */
 .hero {
   min-height: 100vh;
@@ -123,10 +152,7 @@ nav {
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg,
-      rgba(10, 10, 10, 0.85) 0%,
-      rgba(5, 5, 5, 0.95) 100%),
-    url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80") no-repeat center center / cover;
+  background:url('../imgs/Formas\ Geométricas\ com\ Luz\ Cálida.png') no-repeat center center / cover;
 }
 
 .hero-content {
@@ -141,16 +167,12 @@ nav {
   margin-bottom: 20px;
   letter-spacing: -5px;
   font-weight: 800;
-  background: linear-gradient(to right, #fff, #d1d5db);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title {
   font-size: 1.5rem;
-  color: #e5e7eb;
+  color: #ffffff;
   margin-bottom: 40px;
   letter-spacing: 8px;
   text-transform: uppercase;
@@ -662,6 +684,12 @@ footer {
 
   .section-title {
     font-size: 2.5rem;
+  }
+
+  .language-selector {
+    position: absolute;
+    top: 20px;
+    right: 80px;
   }
 }
 
