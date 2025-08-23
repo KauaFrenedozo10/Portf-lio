@@ -90,7 +90,7 @@ const flagIcon = document.getElementById('flag-icon');
 let currentLanguage = 'pt';
 
 const translations = {
-    // Menu items
+    // Menu items | Itens do menu
     'menu-home': {
         pt: 'home',
         en: 'home'
@@ -108,7 +108,7 @@ const translations = {
         en: 'contact'
     },
 
-    // Hero section
+    // Hero section | Redirecionamento
     'hero-title': {
         pt: 'DESENVOLVEDOR FULL-STACK',
         en: 'FULL-STACK DEVELOPER'
@@ -126,7 +126,7 @@ const translations = {
         en: 'contact'
     },
 
-    // Skills section
+    // Skills section | Seção de Habilidades
     'skills-title': {
         pt: 'Minhas <span>Habilidades</span>',
         en: 'My <span>Skills</span>'
@@ -168,50 +168,46 @@ const translations = {
         en: 'Websites that perfectly adapt to any device or screen size.'
     },
 
-    // Projects section
+    // Projects section | Seção de Projetos
     'projects-title': {
         pt: 'Meus <span>Projetos</span>',
         en: 'My <span>Projects</span>'
     },
     'project-1-title': {
-        pt: 'Loja Virtual Moderna',
-        en: 'Modern E-commerce Store'
+        pt: 'FaceShield',
+        en: 'FaceShield'
     },
     'project-1-desc': {
-        pt: 'Plataforma de e-commerce completa com carrinho, checkout e integração de pagamentos.',
-        en: 'Complete e-commerce platform with shopping cart, checkout, and payment integration.'
+        pt: 'Este é um sistema de gerenciamento de empréstimos de ferramentas completo, que utiliza reconhecimento facial para validação de usuários. Ele permite o gerenciamento total (CRUD) de usuários, ferramentas, locais, estados e empréstimos, além de oferecer buscas detalhadas por ferramentas disponíveis, por localização/estado e histórico de empréstimos.',
+        en: 'This is a complete tool loan management system that uses facial recognition for user validation. It allows full CRUD management of users, tools, locations, statuses, and loans, as well as providing detailed searches for available tools, by location/status, and loan history.'
     },
     'project-2-title': {
-        pt: 'Dashboard Financeiro',
-        en: 'Financial Dashboard'
+        pt: 'Página Web – FaceShield',
+        en: 'Landing Page – FaceShield'
     },
     'project-2-desc': {
-        pt: 'Sistema de análise e visualização de dados financeiros em tempo real com gráficos interativos.',
-        en: 'Real-time financial data analysis and visualization system with interactive charts.'
+        pt: 'Desenvolvi uma landing page para a FaceShield, empresa especializada em automação de bancadas e organização. O projeto teve como foco apresentar os serviços de forma clara e objetiva, destacando a identidade visual da marca e garantindo uma experiência de navegação simples e intuitiva. A página foi estruturada para transmitir credibilidade, otimizar a comunicação com potenciais clientes e facilitar a conversão, unindo design moderno e funcionalidade.',
+        en: 'I developed a landing page for FaceShield, a company specialized in workstation automation and organization. The project focused on presenting the services in a clear and objective way, highlighting the brand’s visual identity and ensuring a simple and intuitive user experience. The page was designed to convey credibility, optimize communication with potential clients, and drive conversions by combining modern design with functionality.'
     },
     'project-3-title': {
-        pt: 'App de Fitness',
-        en: 'Fitness App'
+        pt: 'Em Breve',
+        en: 'Coming Soon'
     },
     'project-3-desc': {
-        pt: 'Aplicativo para acompanhamento de treinos, dieta e progresso físico com plano personalizado.',
-        en: 'App for tracking workouts, diet, and physical progress with personalized plans.'
-    },
-    'project-demo': {
-        pt: 'Demo',
-        en: 'Demo'
+        pt: '',
+        en: ''
     },
     'project-code': {
-        pt: 'Código',
-        en: 'Code'
+        pt: 'Ver Código',
+        en: 'View Code'
     },
     'project-code-2': {
-        pt: 'Código',
-        en: 'Code'
+        pt: 'Ver Código',
+        en: 'View Code'
     },
     'project-code-3': {
-        pt: 'Código',
-        en: 'Code'
+        pt: 'Em Breve',
+        en: 'Coming Soon'
     },
 
     // Contact section
@@ -226,13 +222,13 @@ const translations = {
 
     // Footer
     'footer-text': {
-        pt: '&copy; 2025 Kauã Frenedozo. Todos os direitos reservados.',
-        en: '&copy; 2025 Kauã Frenedozo. All rights reserved.'
+        pt: '© 2025 Kauã Frenedozo. Todos os direitos reservados.',
+        en: '© 2025 Kauã Frenedozo. All rights reserved.'
     }
 };
 
 function updateLanguage(lang) {
-    // Update flag
+    // Update flag | Atualizar a Bandeira
     flagIcon.src = lang === 'pt'
         ? 'https://flagcdn.com/w20/br.png'
         : 'https://flagcdn.com/w20/us.png';
